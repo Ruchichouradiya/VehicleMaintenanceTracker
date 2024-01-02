@@ -89,8 +89,23 @@ Endpoint: DELETE /api/reminders/{reminderId}
 - AAx Integration: Connects with AAx plug-in devices to gather vehicle diagnostic data.
 
 
+**Database** 
+I have used in-memory database but it can be updated for each service to different database based on requirements.
+
+User Authentication and Registration Microservice:
+Database: PostgreSQL
+For handling user authentication and registration data.
+
+Vehicle Management Microservice:
+Database: MongoDB
+Since vehicle data may have varying structures and can benefit from flexibility and MongoDB works well with JSON-like documents.
+
+Maintenance History Microservice:
+Database: PostgreSQL
+A relational database like PostgreSQL is appropriate for maintaining a history of service records as data may have structured format.
+
+Maintenance Reminders Microservice:
+Database: Redis
+can be used for caching which can help for quick retrieval of maintenance reminders based on vehical id.
 
 
-
-
-  
