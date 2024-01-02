@@ -81,14 +81,6 @@ Endpoint: POST /api/reminders
 Delete reminders:
 Endpoint: DELETE /api/reminders/{reminderId}
 
-
-  It can be further enhanced to have below funcationalities :-
-- recommending repair shops when needed
-- Notification Service for upcoming scheduled maintenance.
-- Fault Diagnosis - Provides basic fault diagnosis based on entered symptoms.
-- AAx Integration: Connects with AAx plug-in devices to gather vehicle diagnostic data.
-
-
 **Database** 
 I have used in-memory database but it can be updated for each service to different database based on requirements.
 
@@ -109,3 +101,8 @@ Database: Redis
 can be used for caching which can help for quick retrieval of maintenance reminders based on vehical id.
 
 
+**More Suggestions**
+It can be further enhanced to have below funcationalities :-
+- Notification Service for upcoming scheduled maintenance.
+- Fault Diagnosis - Provides basic fault diagnosis based on entered symptoms.
+- AAx Integration: Connects with AAx plug-in devices to gather vehicle diagnostic data.
