@@ -23,6 +23,7 @@ public class VehicleServiceTest {
 
 	private Vehicle vehicle;
 
+	@Before
 	private void prepareData() {
 
 		// Mock data
@@ -41,7 +42,7 @@ public class VehicleServiceTest {
 	@Test
 	public void testCreateVehicle() {
 
-		prepareData();
+		//prepareData();
 		Mockito.when(vehicleRepository.save(Mockito.any(Vehicle.class))).thenAnswer(invocation -> {
 			Vehicle savedVehicle = invocation.getArgument(0);
 			savedVehicle.setId(1L); // Assign a mock ID
@@ -60,7 +61,7 @@ public class VehicleServiceTest {
 	@Test
 	public void testGetVehicleById() {
 		long vehicleId = 1L;
-		prepareData();
+		//prepareData();
 		// Mock repository behavior
 		Mockito.when(vehicleRepository.findById(vehicleId)).thenReturn(Optional.of(vehicle));
 
@@ -96,7 +97,7 @@ public class VehicleServiceTest {
 	public void testUpdateVehicle() {
 		// Mock data
 		long vehicleId = 1L;
-		prepareData();
+		//prepareData();
 		Vehicle updatedVehicle = vehicle;
 		updatedVehicle.setModel("City");
 
